@@ -33,8 +33,7 @@ public class Zoom {
 			
 			ru.closedriver();
 			
-			driver.quit();
-
+			
 		} catch (Exception e) {
 			System.out.println(e);
 			ru.closedriver();
