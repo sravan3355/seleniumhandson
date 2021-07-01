@@ -7,8 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import sample.pages.GithubPage;
-
 public class ReusableUtility {
 	public WebDriver driver1;
 
