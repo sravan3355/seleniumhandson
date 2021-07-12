@@ -1,5 +1,8 @@
 package sample.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,7 +57,7 @@ public class AmazonPages {
 
 	public void ValidateAmazonLink() {
 		RU.sleep();
-
+		this.links();
 		RU.sendKeysFunction(twoTabSearchTextBox, "Mac Laptop");
 		RU.sleep();
 		RU.abcdClick(go);
@@ -93,5 +96,25 @@ public class AmazonPages {
 		
 
 	}
+	
+	
+	public void links(){
+		List<WebElement> listOfElements=driver1.findElements(By.xpath("//a[@href]"));
+		
+		
+		for (int i=0;i<listOfElements.size();i++){
+			System.out.println(listOfElements.get(i).getAttribute("href"));
+		}
+			
+			
+			
+			
+		for(WebElement e:listOfElements ){
+			System.out.println(e.getText());
+			System.out.println(e.getAttribute("href"));
+		}
+	}
 
+	
+	
 }

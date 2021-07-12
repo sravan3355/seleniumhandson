@@ -152,6 +152,7 @@ public class HoverPage {
 		driver1.switchTo().window(tabs.get(1));
 		RU.sleep();
 		driver1.switchTo().window(tabs.get(0));
+		
 
 	}
 
