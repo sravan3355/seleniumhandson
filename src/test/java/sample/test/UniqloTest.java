@@ -6,24 +6,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import sample.pages.EbayPage;
+import sample.pages.UniqloPage;
 import sample.utility.ReusableUtility;
 
-public class EbayTest {
+public class UniqloTest {
 
 	@Test
-	public void EbayPage() throws InterruptedException {
+	public void UniqloPage() throws InterruptedException {		
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\5593\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
-		EbayPage sp = new EbayPage(driver);
+		UniqloPage up = new sample.pages.UniqloPage(driver);
 		ReusableUtility ru = new ReusableUtility(driver);
 		try {
-			String url = "https://www.ebay.ca/";
+			String url = "https://www.uniqlo.com/";
 			ru.navigateTo(url);
 			ru.maximiseBrowserWindow();
-		    sp.ValidateEbayLink();
+		    up.ValidateUniqloLink();
 		 
 			Thread.sleep(5000);
 
@@ -40,4 +40,3 @@ public class EbayTest {
 	}
 
 }
-
