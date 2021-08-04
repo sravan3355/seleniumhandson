@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/sample/features",
         glue= {"sample.step_definitions"},
         plugin = { "pretty" },
+        tags="@Collins",
         monochrome = true,
         publish=true
 )
@@ -16,3 +17,5 @@ import org.junit.runner.RunWith;
 public class cucumberRunner {
 
 }
+
+

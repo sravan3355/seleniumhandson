@@ -97,37 +97,46 @@ public class EbayPage {
 
 	
 public void ValidateEbayLink() {
-	
+
 	RU.abcdClick(shopByCategory);
 	RU.abcdClick(sneakers);
 	RU.sendKeysFunction(searchForAnything, "puma");
-	
+
 	RU.abcdClick(submit);
 	RU.abcdClick(condition);
+}
+public void selectPreOwned() {
 	RU.abcdClick(preOwned);
 	RU.abcdClick(itemLocation);
 	RU.abcdClick(worldWide);
 	RU.abcdClick(size);
 	RU.abcdClick(black);
-	
+
 	RU.abcdClick(removeBlack);
-	
+
 	RU.abcdClick(thisBlack);
 	RU.sleep();
 	RU.abcdClick(blackRunning);
+}
+public void checkCartBtn(){
 	RU.abcdClick(cartBtn);
 	RU.sleep();
+	}
+	public void selectCartRemoveItem(){
 	RU.abcdClick(cartRemoveItem);
 	System.out.println("You dont have any items in your cart.");
 	RU.sleep();
 	RU.abcdClick(link);
 	RU.abcdClick(isCartBtnBtn);
+
+}
+public void selectCheckOut(){
+
 	RU.abcdClick(CheckOut);
 	RU.sleep();
 	RU.abcdClick(continueAsGuest);
 	RU.sleep();
-	   
-	RU.sleep();
+
 	RU.sendKeysFunction(firstName, "srahvdjgcvdvgvdk");
 	RU.sleep();
 	Select dropdown=new Select(driver1.findElement(By.id("country")));

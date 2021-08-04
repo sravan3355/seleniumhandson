@@ -1,6 +1,7 @@
 package sample.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -72,6 +73,13 @@ public class ReusableUtility {
 
 	public void abcdClick(WebElement element) {
 		element.click();
+
+	}
+
+	public void jsClick(WebElement element) {
+		JavascriptExecutor ex=(JavascriptExecutor) driver1;
+		ex.executeScript("arguments[0].click();",element);
+
 
 	}
 
