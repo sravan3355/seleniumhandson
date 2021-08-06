@@ -1,6 +1,6 @@
 package sample.pages;
 
-import com.sun.deploy.cache.BaseLocalApplicationProperties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,10 +36,8 @@ public class CollinsPage {
     @FindBy(xpath = "//a[contains(text(),'Forgot account?')]")
     public WebElement forgotAccount;
 
-
-
-
-
+    @FindBy(xpath = "//a[@class='share-close']")
+    public WebElement shareClose;
 
     public void ValidateCollinsLink() {
 
@@ -48,30 +46,33 @@ public class CollinsPage {
         RU.waitForVisibilityOfElement(search);
         RU.abcdClick(search);
     }
-        public void selectShare() {
-            RU.abcdClick(share);
-            RU.abcdClick(shareThisPageOnFacebook);
-            ArrayList<String> tabs = new ArrayList<String>(driver1.getWindowHandles());
 
-            driver1.switchTo().window(tabs.get(1));
+    public void selectShare() {
+        RU.abcdClick(share);
+        RU.abcdClick(shareThisPageOnFacebook);
+        ArrayList<String> tabs = new ArrayList<String>(driver1.getWindowHandles());
 
-        }
-        public void clickForgotAccount() {
-
-            RU.waitForVisibilityOfElement(forgotAccount);
-            RU.abcdClick(forgotAccount);
-            ArrayList<String> tabs = new ArrayList<String>(driver1.getWindowHandles());
-            driver1.switchTo().window(tabs.get(2));
-
-
-
-
-        }
-
-
-
+        driver1.switchTo().window(tabs.get(1));
 
     }
+
+    public void clickForgotAccount() {
+
+        RU.waitForVisibilityOfElement(forgotAccount);
+        RU.abcdClick(forgotAccount);
+        ArrayList<String> tabs = new ArrayList<String>(driver1.getWindowHandles());
+        driver1.switchTo().window(tabs.get(2));
+        RU.sleep();
+        driver1.switchTo().window(tabs.get(0));
+        RU.sleep();
+    }
+
+    public void clickShareClose() {
+        RU.abcdClick(shareClose);
+    }
+
+
+}
 
 
 
