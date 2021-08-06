@@ -1,13 +1,16 @@
 package sample.pages;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import org.openqa.selenium.support.PageFactory;
 
 import sample.utility.ReusableUtility;
 
 public class AmazonPages {
+
 	public WebDriver driver1;
 	ReusableUtility RU;
 
@@ -16,6 +19,7 @@ public class AmazonPages {
 		RU = new ReusableUtility(driver);
 		PageFactory.initElements(driver, this);
 	}
+
 
 	@FindBy(xpath = "//input[@id='twotabsearchtextbox']")
 	public WebElement twoTabSearchTextBox;
@@ -93,5 +97,6 @@ public class AmazonPages {
 		
 
 	}
+
 
 }
