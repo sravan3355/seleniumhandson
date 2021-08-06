@@ -6,6 +6,7 @@ Feature: verify Collins Page
     Then Validate Collins Link
     Then Select Share
     Then click Forgot Account
+    Then click Share Close
 
 
 

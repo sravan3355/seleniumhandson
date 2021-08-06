@@ -21,6 +21,11 @@ public class CollinsSteps {
     public void clickForgotAccount() {
         cp.clickForgotAccount();
     }
+    @Then("click Share Close")
+    public void clickShareClose() {
+        cp.clickShareClose();
+    }
+
 
 
 }
