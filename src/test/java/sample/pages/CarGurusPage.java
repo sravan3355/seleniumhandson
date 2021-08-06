@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import org.openqa.selenium.support.PageFactory;
 import sample.utility.ReusableUtility;
 
 public class CarGurusPage {
@@ -13,6 +14,7 @@ public class CarGurusPage {
 	public CarGurusPage(WebDriver driver) {
 		driver1 = driver;
 		RU = new ReusableUtility(driver);
+		PageFactory.initElements(driver, this);
 
 	}
 

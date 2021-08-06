@@ -1,11 +1,14 @@
 package sample.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ReusableUtility {
 	public WebDriver driver1;
@@ -73,10 +76,24 @@ public class ReusableUtility {
 
 	}
 
+	public void jsClick(WebElement element) {
+		JavascriptExecutor ex=(JavascriptExecutor) driver1;
+		ex.executeScript("arguments[0].click();",element);
+
+
+	}
+
 	public void moveToElementClick(WebElement xpath1, WebElement xpath2) {
 		Actions action = new Actions(driver1);
 
 		action.moveToElement(xpath1).moveToElement(xpath2).click().build().perform();
+
+	}
+	
+	public void hoverElement(WebElement xpath1) {
+		Actions action = new Actions(driver1);
+
+		action.moveToElement(xpath1).perform();
 
 	}
 
@@ -96,6 +113,29 @@ public class ReusableUtility {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void waitForVisibilityOfElement(WebElement element){
+		WebDriverWait wait= new WebDriverWait(driver1,10);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void waitForElementToBeClickablle(String xpath){
+		WebDriverWait wait= new WebDriverWait(driver1,10);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+	}
+	
+	public void waitForPresenceOfElementTobeLocated(String xpath){
+		WebDriverWait wait= new WebDriverWait(driver1,10);
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+	}
+	
+	public void waitForPresenceOfElementTobeLocated(By xpelementypeath){
+		WebDriverWait wait= new WebDriverWait(driver1,10);
+		
+		wait.until(ExpectedConditions.presenceOfElementLocated(xpelementypeath));
 	}
 
 }
