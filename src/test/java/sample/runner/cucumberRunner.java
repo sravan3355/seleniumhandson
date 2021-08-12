@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/sample/features",
         glue= {"sample.step_definitions"},
         plugin = { "pretty","html:target/cucumber-reports.html",
-        "json:target/cucumbert-reports/Cucumber.json"},
+        "json:target/cucumber-reports/Cucumber.json"},
         tags="@Collins",
         monochrome = true
 )
