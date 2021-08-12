@@ -17,7 +17,7 @@ public class UniqloTest {
 				"C:\\Users\\5593\\Downloads\\chromedriver_win32\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
-		UniqloPage up = new sample.pages.UniqloPage(driver);
+		UniqloPage up = new UniqloPage(driver);
 		ReusableUtility ru = new ReusableUtility(driver);
 		try {
 			String url = "https://www.uniqlo.com/";
