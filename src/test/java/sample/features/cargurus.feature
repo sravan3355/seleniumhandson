@@ -1,6 +1,6 @@
 Feature: CarGurus Validation
 
-  @carguru
+  @carguru @smoke
   Scenario Outline: verify saved searches
     Then Load URL "<URL>"
     Then validated Saved Search

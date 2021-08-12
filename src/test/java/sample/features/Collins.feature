@@ -1,6 +1,6 @@
 Feature: verify Collins Page
 
-  @Collins
+  @Collins @smoke
   Scenario Outline: Navigate to Collins page
     Given Load URL "<URL>"
     Then Validate Collins Link

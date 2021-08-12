@@ -1,6 +1,6 @@
 Feature: verify Amazon Page
 
-  @Amazon
+  @Amazon @smoke
   Scenario Outline: Navigate to Amazon page
     Given Load URL "<URL>"
     Then Verify Amazon page
